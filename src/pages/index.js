@@ -44,6 +44,9 @@ const IndexPage = () => (
       <Layout>
         <SEO title="Home" keywords={[`umani`, `application`, `react`]} />
         <h1>Giroola special offers!</h1>
+
+        <p>This is a small test site built to test Gatsby + Prismic</p>
+
         <p> Here's our latest offers: </p>
         <div className="lg:flex">
           {data.allPrismicOffer.edges.map(offer => (
