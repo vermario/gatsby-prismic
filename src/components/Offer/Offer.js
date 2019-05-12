@@ -7,7 +7,7 @@ const Offer = props => (
     {props.image.localFile && (
       <Img fluid={props.image.localFile.childImageSharp.fluid} />
     )}
-    <p
+    <div
       className="text-grey-darker text-sm my-4"
       dangerouslySetInnerHTML={{
         __html: props.data.description.html,

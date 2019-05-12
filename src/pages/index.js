@@ -63,7 +63,7 @@ const IndexPage = () => (
                     </Link>
                   </h3>
                 </div>
-                <p
+                <div
                   className="text-grey-darker text-sm"
                   dangerouslySetInnerHTML={{
                     __html: offer.node.data.description.html,
