@@ -54,16 +54,7 @@ module.exports = {
         // provided to the function, as seen below. This allows you to use
         // different link resolver logic for each field if necessary.
         // See: https://prismic.io/docs/javascript/query-the-api/link-resolving
-        linkResolver: ({ node, key, value }) => doc => {
-          return node.uid
-        },
-
-        // Set a list of links to fetch and be made available in your link
-        // resolver function.
-        // See: https://prismic.io/docs/javascript/query-the-api/fetch-linked-document-fields
-        fetchLinks: [
-          // Your list of links
-        ],
+        linkResolver: ({ node, key, value }) => post => `/${post.uid}`,
 
         // Set an HTML serializer function used to process formatted content.
         // Fields with rich text formatting use this function to generate the
@@ -72,14 +63,6 @@ module.exports = {
         // provided to the function, as seen below. This allows you to use
         // different HTML serializer logic for each field if necessary.
         // See: https://prismic.io/docs/nodejs/beyond-the-api/html-serializer
-        htmlSerializer: ({ node, key, value }) => (
-          type,
-          element,
-          content,
-          children
-        ) => {
-          // Your HTML serializer
-        },
 
         // Set a default language when fetching documents. The default value is
         // '*' which will fetch all languages.
